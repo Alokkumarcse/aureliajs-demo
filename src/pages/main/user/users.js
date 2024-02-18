@@ -1,5 +1,5 @@
 // ViewModel
-import { User } from "../../../models/user-model";
+import { User } from "../../../models/user/user-model";
 
 export class Users {
   constructor() {
