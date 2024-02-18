@@ -1,0 +1,27 @@
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 30px;
+  width: auto;
+}
+
+#logo img {
+  height: 30px;
+  width: 30px;
+  border: 2px solid lightblue;
+  border-radius: 50%;
+}
+
+.nav_item_list {
+  display: flex;
+  justify-content: space-between; /* or space-around or space-evenly */
+  width: auto;
+  list-style: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.nav_item {
+  margin-right: 10px;
+}

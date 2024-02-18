@@ -1,0 +1,34 @@
+<template>
+  <div style="padding: 20px">
+    <h2>Main component</h2>
+
+    <div style="margin-bottom: 10px">
+      <h4>${home}</h4>
+      <h1>${message}</h1>
+      <div style="width: 600px; height: 400px; margin: 20px auto">
+        <img
+          src="../../../assets/images/home_chart.png"
+          alt="pics"
+          style="width: 600px; height: 400px"
+        />
+      </div>
+      <div style="margin: 0 10px">
+        <input
+          type="text"
+          value.bind="input"
+          placeholder="type something here"
+        />
+        <button type="submit" click.trigger="submit()">Submit</button>
+      </div>
+      <div
+        style="
+          background-color: palegreen;
+          width: fit-content;
+          margin: 0 10px 10px 10px;
+        "
+      >
+        ${input}
+      </div>
+    </div>
+  </div>
+</template>

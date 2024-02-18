@@ -1,22 +1,26 @@
 <template>
-  <require from="../home/home"></require>
-  <require from="../users/users""></require>
-  <div style="border: 3px solid green; margin-bottom: 10px">
-    <h1>${message}</h1>
-    <div style="width: 600px; height: 400px; margin: 20px auto">
-      <img
-        src="../../assets/images/home_chart.png"
-        alt="pics"
-        style="width: 600px; height: 400px"
-      />
-    </div>
-    <div style="margin: 0 10px;"><input type="text" value.bind="input" placeholder="type something here"/></div>
-    <div style="background-color: palegreen; width: fit-content; margin: 0 10px 10px 10px">${input}</div>
-  </div>
-  <!-- render other component with help of compose element -->
-  <compose view-model="../users/users"></compose>
-  <!-- rendering component directly by require that component and use as element -->
-  <users></users>
-  <home></home>
-  
+  <require from="../main/home/home"></require>
+  <require from="../main/user/users""></require>
+  <require from="../header/app-navbar"></require>
+  <section>
+    <!-- header/nav part of app -->
+    <header id="app_header">
+      <app-navbar></app-navbar>
+    </header>
+    <!-- main content part of app -->
+    <main id="app_main">
+      <!-- <router-view containerless></router-view> -->
+      <!-- rendering component directly by require that component and use as element -->
+      <home></home>
+      <!-- <users></users> -->
+      <!-- render other component with help of compose element -->
+      <!-- <compose view-model="../main/user/users"></compose> -->
+    </main>
+    <!-- footer part of app -->
+    <footer id="app_footer">
+      <small>
+        &copy; AV Ventures 2024 | Built in Samastipur, Bihar
+      </small>
+    </footer>
+  </section>
 </template>

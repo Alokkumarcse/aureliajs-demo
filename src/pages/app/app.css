@@ -1,0 +1,19 @@
+#app_header {
+  width: auto;
+  border: 2px solid gray;
+  padding: 5px;
+}
+
+#app_main {
+  width: auto;
+  border: 3px solid rgb(99, 123, 93);
+}
+
+#app_footer {
+  width: auto;
+  border: 2px solid rgb(111, 180, 223);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
