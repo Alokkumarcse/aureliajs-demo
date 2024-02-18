@@ -12,9 +12,13 @@
       <!-- <router-view containerless></router-view> -->
       <!-- rendering component directly by require that component and use as element -->
       <home></home>
-      <!-- <users></users> -->
+      <users></users>
       <!-- render other component with help of compose element -->
-      <!-- <compose view-model="../main/user/users"></compose> -->
+      <compose view-model="../main/user/users"></compose>
+      <div class="main">
+        <compose view-model="../main/events/events"></compose>
+        <compose view-model="../main/sponsors/sponsors"></compose>
+      </div>
     </main>
     <!-- footer part of app -->
     <footer id="app_footer">
