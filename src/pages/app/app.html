@@ -1,14 +1,22 @@
 <template>
-  <h1>${message}</h1>
-  <div style="width: 600px; height: 400px; margin: 20px auto">
-    <img
-      src="../../assets/images/home_chart.png"
-      alt="pics"
-      style="width: 600px; height: 400px"
-    />
+  <require from="../home/home"></require>
+  <require from="../users/users""></require>
+  <div style="border: 3px solid green; margin-bottom: 10px">
+    <h1>${message}</h1>
+    <div style="width: 600px; height: 400px; margin: 20px auto">
+      <img
+        src="../../assets/images/home_chart.png"
+        alt="pics"
+        style="width: 600px; height: 400px"
+      />
+    </div>
+    <div style="margin: 0 10px;"><input type="text" value.bind="input" placeholder="type something here"/></div>
+    <div style="background-color: palegreen; width: fit-content; margin: 0 10px 10px 10px">${input}</div>
   </div>
-  <div><input type="text" value.bind="input" /></div>
-  <div style="background-color: palegreen; width: fit-content">${input}</div>
   <!-- render other component with help of compose element -->
   <compose view-model="../users/users"></compose>
+  <!-- rendering component directly by require that component and use as element -->
+  <users></users>
+  <home></home>
+  
 </template>

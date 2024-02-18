@@ -1,9 +1,9 @@
 // ViewModel
 import { User } from "../../models/user-model";
 
-export class UserViewModel {
+export class Users {
   constructor() {
-    this.user = new User("John Doe", 30);
+    this.user = new User("Alok", 26);
     console.log(this.user, "user");
   }
 
