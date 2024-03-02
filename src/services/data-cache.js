@@ -1,6 +1,6 @@
-import { singleton } from "aurelia-framework";
+import { singleton, transient } from "aurelia-framework";
 
-@singleton()
+@transient()
 export class DataCache {
   constructor() {
     this.data = [];
