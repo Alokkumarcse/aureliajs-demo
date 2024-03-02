@@ -1,5 +1,10 @@
+import { inject } from "aurelia-framework";
+
+import { DataCache } from "../../../services/data-cache";
+
+@inject(DataCache)
 export class Events {
-  constructor() {
+  constructor(dataCache) {
     this.name = "Events component";
     this.events = [
       { id: "1", name: "task1" },
@@ -8,5 +13,9 @@ export class Events {
       { id: "4", name: "task4" },
       { id: "5", name: "task5" },
     ];
+    this.cache = dataCache;
+    this.cache.data.push("Aurelia.js");
+    this.cache.data.push("React.js");
+    console.log(this.cache);
   }
 }
