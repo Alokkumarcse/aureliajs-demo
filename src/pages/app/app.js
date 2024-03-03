@@ -40,12 +40,16 @@ export class App {
         title: "Events",
         nav: true,
       },
-      // Catch-all route for undefined routes
-      {
-        route: ":catchAll*",
+    ]);
+
+    // handling unknown routes
+    config.mapUnknownRoutes((instruction) => {
+      console.log(instruction, "from handling unknown routes");
+      return {
         name: "not-found",
         moduleId: PLATFORM.moduleName("../main/not-found/not-found"),
-      },
-    ]);
+        title: "404:Page Not Found",
+      };
+    });
   }
 }
