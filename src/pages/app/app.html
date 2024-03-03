@@ -5,20 +5,20 @@
   <section>
     <!-- header/nav part of app -->
     <header id="app_header">
-      <app-navbar></app-navbar>
+      <app-navbar containerless></app-navbar>
     </header>
     <!-- main content part of app -->
     <main id="app_main">
-      <!-- <router-view containerless></router-view> -->
+      <router-view containerless></router-view>
       <!-- rendering component directly by require that component and use as element -->
-      <home></home>
-      <users></users>
+      <!-- <home></home>
+      <users></users> -->
       <!-- render other component with help of compose element -->
-      <compose view-model="../main/user/users"></compose>
+      <!-- <compose view-model="../main/user/users"></compose>
       <div class="main">
         <compose view-model="../main/events/events"></compose>
         <compose view-model="../main/sponsors/sponsors"></compose>
-      </div>
+      </div> -->
     </main>
     <!-- footer part of app -->
     <footer id="app_footer">

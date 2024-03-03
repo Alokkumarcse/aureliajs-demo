@@ -2,7 +2,7 @@ import environment from "../config/environment.json";
 import { PLATFORM } from "aurelia-pal";
 import { App } from "./pages/app/app";
 
-export function configure(aurelia) {
+export async function configure(aurelia) {
   aurelia.use
     .standardConfiguration()
     .feature(PLATFORM.moduleName("resources/index"));
@@ -13,5 +13,6 @@ export function configure(aurelia) {
     aurelia.use.plugin(PLATFORM.moduleName("aurelia-testing"));
   }
 
-  aurelia.start().then(() => aurelia.setRoot(PLATFORM.moduleName(App)));
+  await aurelia.start();
+  await aurelia.setRoot(PLATFORM.moduleName(App));
 }
