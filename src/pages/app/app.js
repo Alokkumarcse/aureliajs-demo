@@ -40,6 +40,12 @@ export class App {
         title: "Events",
         nav: true,
       },
+      {
+        route: "user/:id",
+        moduleId: PLATFORM.moduleName("../main/user/user", "user"),
+        name: "User",
+        title: "User",
+      },
     ]);
 
     // handling unknown routes

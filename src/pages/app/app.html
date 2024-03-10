@@ -1,6 +1,6 @@
 <template>
   <require from="../main/home/home"></require>
-  <require from="../main/user/users""></require>
+  <!-- <require from="../main/user/users""></require> -->
   <require from="../header/app-navbar"></require>
   <section>
     <!-- header/nav part of app -->
@@ -11,8 +11,13 @@
           <img src="../../assets/images/home_chart.png" alt="Logo" />
         </div>
         <ul class="nav_item_list">
-          <li repeat.for="route of router.navigation" class="nav_item ${route.isActive?'active':''}">
-            <a href.bind="route.href" style="text-decoration: none;">${route.title}</a>
+          <li
+            repeat.for="route of router.navigation"
+            class="nav_item ${route.isActive?'active':''}"
+          >
+            <a href.bind="route.href" style="text-decoration: none"
+              >${route.title}</a
+            >
           </li>
         </ul>
       </div>
@@ -32,9 +37,7 @@
     </main>
     <!-- footer part of app -->
     <footer id="app_footer">
-      <small>
-        &copy; AV Ventures 2024 | Built in Samastipur, Bihar
-      </small>
+      <small> &copy; AV Ventures 2024 | Built in Samastipur, Bihar </small>
     </footer>
   </section>
 </template>
