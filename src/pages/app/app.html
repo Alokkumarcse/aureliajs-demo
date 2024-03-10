@@ -5,7 +5,17 @@
   <section>
     <!-- header/nav part of app -->
     <header id="app_header">
-      <app-navbar containerless></app-navbar>
+      <!-- <app-navbar containerless></app-navbar> -->
+      <div class="nav">
+        <div id="logo">
+          <img src="../../assets/images/home_chart.png" alt="Logo" />
+        </div>
+        <ul class="nav_item_list">
+          <li repeat.for="route of router.navigation" class="nav_item ${route.isActive?'active':''}">
+            <a href.bind="route.href" style="text-decoration: none;">${route.title}</a>
+          </li>
+        </ul>
+      </div>
     </header>
     <!-- main content part of app -->
     <main id="app_main">

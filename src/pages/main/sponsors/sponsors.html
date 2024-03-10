@@ -1,5 +1,8 @@
 <template>
   <div>
     <h3>Sponsors Page</h3>
+    <ul repeat.for="user of usersData">
+      <li>${user.id}: ${user.userName}</li>
+    </ul>
   </div>
 </template>
