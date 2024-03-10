@@ -11,6 +11,16 @@ export class Sponsors {
     this.usersData = [];
   }
 
+  // Programmatic controlling navigation
+  goToHome() {
+    //one way
+    // this.router.navigate("#/Home");
+    //another way to do this
+    this.router.navigateToRoute("User", { id: this.usersData[0].id });
+  }
+
+  // another way to do the same as above
+
   async activate() {
     this.usersData = await this.dataCache.getUsers();
     this.usersData.forEach(
