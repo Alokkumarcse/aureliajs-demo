@@ -1,5 +1,7 @@
 import "./app-navbar.css";
 
+import { bindingMode, bindable } from "aurelia-framework";
+
 export class AppNavbar {
-  navbar = "navbar";
+  @bindable({ defaultBindingMode: bindingMode.toView }) router = "";
 }

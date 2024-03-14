@@ -1,12 +1,15 @@
 <template>
+  <require from="../header/app-navbar"></require>
   <require from="../main/home/home"></require>
   <!-- <require from="../main/user/users""></require> -->
-  <require from="../header/app-navbar"></require>
+
   <section>
     <!-- header/nav part of app -->
     <header id="app_header">
-      <!-- <app-navbar containerless></app-navbar> -->
-      <div class="nav">
+      <!-- Good way to create nav menu using separate nav folder -->
+      <app-navbar router.bind="router" containerless></app-navbar>
+      <!-- Basic way to create nav menu -->
+      <!-- <div class="nav">
         <div id="logo">
           <img src="../../assets/images/home_chart.png" alt="Logo" />
         </div>
@@ -20,8 +23,9 @@
             >
           </li>
         </ul>
-      </div>
+      </div> -->
     </header>
+
     <!-- main content part of app -->
     <main id="app_main">
       <router-view containerless></router-view>
@@ -35,6 +39,7 @@
         <compose view-model="../main/sponsors/sponsors"></compose>
       </div> -->
     </main>
+
     <!-- footer part of app -->
     <footer id="app_footer">
       <small> &copy; AV Ventures 2024 | Built in Samastipur, Bihar </small>

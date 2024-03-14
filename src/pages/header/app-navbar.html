@@ -4,10 +4,14 @@
       <img src="../../assets/images/home_chart.png" alt="Logo" />
     </div>
     <ul class="nav_item_list">
-      <li class="nav_item">Home</li>
-      <li class="nav_item">Jobs</li>
-      <li class="nav_item">Sponsors</li>
-      <li class="nav_item">Events</li>
+      <li
+        repeat.for="route of router.navigation"
+        class="nav_item ${route.isActive?'active':''}"
+      >
+        <a href.bind="route.href" style="text-decoration: none"
+          >${route.title}</a
+        >
+      </li>
     </ul>
   </div>
 </template>

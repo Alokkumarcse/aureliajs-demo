@@ -9,7 +9,9 @@ export class App {
 
   // Defining routes for Router
   configureRouter(config, router) {
-    this.router = router;
+    this.router = router; // router reference
+    // used for HTML5 history api-based routing and eliminate the # routing
+    config.options.pushState = true;
     config.title = "AV Ventures";
     config.map([
       {
