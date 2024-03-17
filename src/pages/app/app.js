@@ -43,6 +43,16 @@ export class App {
         nav: true,
       },
       {
+        route: "discussion",
+        moduleId: PLATFORM.moduleName(
+          "../main/discussion/discussion",
+          "discussion"
+        ),
+        name: "Discussion",
+        title: "Discussion",
+        nav: true,
+      },
+      {
         route: "user/:id",
         moduleId: PLATFORM.moduleName("../main/user/user", "user"),
         name: "User",

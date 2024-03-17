@@ -1,4 +1,23 @@
 <template>
   <h3>Discussion Page</h3>
   <p>${discussion}</p>
+  <p>
+    In this tab we are using canDeactivate() method to prevent away from the
+    current screen such as if there's input from user that has not been saved.
+    <br />
+    We may need to prompt the user, ask them if they want to save that or if
+    they want to cancel the navigation altogether.
+    <br />
+    we can do these things with the canDeactivate method.
+  </p>
+
+  <br />
+  Discussion Input:
+  <input type="text" value.bind="discussionInput" />
+  <button type="button" click.delegate="save()">Save</button>
+  <br />
+  <br />
+  Test the canDeactivate() and deactivate() method.
+  <br />
+  <br />
 </template>
