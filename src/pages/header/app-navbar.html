@@ -12,6 +12,13 @@
           >${route.title}</a
         >
       </li>
+      <li>
+        <i
+          class="fa fa-cog fa-spin fa-1x"
+          style="margin: 0 auto"
+          if.bind="router.isNavigating"
+        ></i>
+      </li>
     </ul>
   </div>
 </template>

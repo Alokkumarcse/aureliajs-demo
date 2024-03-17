@@ -4,7 +4,7 @@
     <h3>${name}</h3>
   </div>
   <div repeat.for="task of events">
-    <compose view-model="../event/event" model.bind="task"></compose>
+    <compose view-model="./event" model.bind="task"></compose>
   </div>
   <div>
     <ul repeat.for="item of cache.data">

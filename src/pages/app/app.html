@@ -1,4 +1,8 @@
 <template>
+  <require from="@fortawesome/fontawesome-free/css/all.min.css"></require>
+  <require
+    from="../../resources/custom-elements/loading-indicator/loading-indicator"
+  ></require>
   <require from="../header/app-navbar"></require>
   <require from="../main/home/home"></require>
   <!-- <require from="../main/user/users""></require> -->
@@ -22,6 +26,13 @@
               >${route.title}</a
             >
           </li>
+          <li>
+            <i
+              class="fa fa-cog fa-spin fa-1x"
+              style="margin: 0 auto"
+              if.bind="router.isNavigating"
+            ></i>
+          </li>
         </ul>
       </div> -->
     </header>
@@ -29,6 +40,8 @@
     <!-- main content part of app -->
     <main id="app_main">
       <router-view containerless></router-view>
+      <loading-indicator loading.bind="router.isNavigation"></loading-indicator>
+
       <!-- rendering component directly by require that component and use as element -->
       <!-- <home></home>
       <users></users> -->

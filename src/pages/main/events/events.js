@@ -18,4 +18,12 @@ export class Events {
     this.cache.data.push("React.js");
     console.log(this.cache);
   }
+
+  activate() {
+    // added an arbitrary time delay to show an spinning cog while loading the routed page
+    let promise = new Promise((resolve, reject) => {
+      setTimeout((_) => resolve(), 1000);
+    });
+    return promise;
+  }
 }

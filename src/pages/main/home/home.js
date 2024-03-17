@@ -12,6 +12,14 @@ export class Home {
     this.addItem("newItem");
   }
 
+  activate(params, routeConfig, navigationInstruction) {
+    // added an arbitrary time delay to show an spinning cog while loading the routed page
+    let promise = new Promise((resolve, reject) => {
+      setTimeout((_) => resolve(), 1000);
+    });
+    return promise;
+  }
+
   addItem(item) {
     this.cache.data.push(item);
   }
