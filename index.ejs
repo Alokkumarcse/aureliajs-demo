@@ -8,13 +8,6 @@
     <link rel="icon" href="favicon.ico" />
     <!-- imported CSS are concatenated and added automatically -->
     <style>
-      body {
-        margin: 0;
-        padding: 0;
-        min-height: 100vh; /* Set full viewport height */
-        display: flex;
-        flex-direction: column;
-      }
       .loading {
         height: 100vh;
         display: flex;
@@ -27,7 +20,7 @@
     </style>
   </head>
   <!-- <body aurelia-app="main">: This tells Aurelia to bootstrap your application using the "main.js" module. The "main" module is typically the entry point of your application where you configure the router, load initial resources, and define the layout structure. -->
-  <body aurelia-app="main">
+  <body class="aurelia-app-wrapper" aurelia-app="main">
     <div class="loading">
       <i class="fa fa-cog fa-spin fa-3x spinner"></i>
     </div>
