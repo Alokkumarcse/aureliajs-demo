@@ -1,15 +1,38 @@
+#app-navbar {
+  border-width: 0 0 1px 0 !important;
+  align-items: normal;
+}
+
+#app-navbar .sticky-top {
+  top: 40px;
+}
+
 .nav {
+  height: 40px;
+  width: 100%;
   display: flex;
-  flex-direction: row;
   align-items: center;
-  height: 30px;
-  width: auto;
+  background-color: #c4d1c5; /* Background color */
+  color: #b1abab; /* Text color */
+}
+
+/* adding horizontal line below navbar using pseudo element property */
+.nav::after {
+  content: "";
+  display: block;
+  height: 1px; /* Height of the line */
+  background-color: #161515; /* Color of the line */
+}
+
+#logo {
+  padding-left: 5px;
 }
 
 #logo img {
-  height: 30px;
-  width: 30px;
-  border: 2px solid lightblue;
+  align-items: center;
+  height: 25px;
+  width: 25px;
+  border: 1px solid rgb(60, 64, 70);
   border-radius: 50%;
 }
 
@@ -25,11 +48,12 @@
 .nav_item {
   margin-right: 10px;
   cursor: pointer;
+  padding: 3px;
 }
 
 .active {
   background-color: rgb(204, 198, 198);
-  padding: 1px;
+  padding: 3px;
   border-radius: 5px;
 }
 

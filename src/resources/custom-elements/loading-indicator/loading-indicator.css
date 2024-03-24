@@ -51,9 +51,7 @@
 }
 
 .loading-modal .heartbeat {
-  -webkit-animation: heartbeat 1.3s ease 0s infinite normal;
   animation: heartbeat 1.3s ease 0s infinite normal;
-  -webkit-transform: rotate(-13deg) scale(1);
   transform: rotate(-13deg) scale(1);
   font-size: 40px;
   color: #f9d7d2;
@@ -66,23 +64,18 @@
 
 @keyframes heartbeat {
   0% {
-    -webkit-transform: rotate(-13deg) scale(1);
-    transform: rotate(-13deg) scale(1);
+    transform: rotate(-15deg) scale(1);
   }
   14% {
-    -webkit-transform: rotate(-13deg) scale(1.3);
-    transform: rotate(-13deg) scale(1.3);
+    transform: rotate(-15deg) scale(1.5);
   }
   28% {
-    -webkit-transform: rotate(-13deg) scale(1);
-    transform: rotate(-13deg) scale(1);
+    transform: rotate(-15deg) scale(1);
   }
   42% {
-    -webkit-transform: rotate(-13deg) scale(1.3);
-    transform: rotate(-13deg) scale(1.3);
+    transform: rotate(-15deg) scale(1.5);
   }
   70% {
-    -webkit-transform: rotate(-13deg) scale(1);
-    transform: rotate(-13deg) scale(1);
+    transform: rotate(-15deg) scale(1);
   }
 }

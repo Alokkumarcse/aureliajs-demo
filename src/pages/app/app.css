@@ -1,88 +1,51 @@
-#app_header {
-  width: auto;
-  border: 2px solid gray;
-  padding: 5px;
+body {
+  transition: opacity 100ms;
+  opacity: 1;
+  overflow: hidden;
 }
 
-#app_main {
-  width: auto;
-  border: 3px solid rgb(99, 123, 93);
-}
-
-#app_footer {
-  width: auto;
-  border: 2px solid rgb(111, 180, 223);
+html,
+body,
+aurelia-app-wrapper {
+  margin: 0; /*remove any default margins set by Browser */
+  padding: 0; /*remove any default paddings set by Browser*/
+  /* display:flex and column, configures the body and its wrapper to use flexbox with a column layout. This helps to align child elements vertically. */
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 5px;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the body fills the viewport height regardless of the content size */
 }
 
-.main {
-  display: flex;
-  justify-content: space-between;
-  margin: 10px;
-  padding: 5px;
-  border: 2px solid green;
+@media screen and (min-device-width: 1025px) and (max-width: 1367px) {
+  html,
+  body,
+  aurelia-app-wrapper {
+    font-size: 16px;
+  }
 }
 
-.nav {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  height: 30px;
-  width: auto;
+#app-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure the header stays above other content */
 }
 
-#logo img {
-  height: 30px;
-  width: 30px;
-  border: 2px solid lightblue;
-  border-radius: 50%;
+#app-main {
+  position: absolute;
+  top: 40px; /* Adjust as needed to avoid scrollbar being hidden behind the header */
+  bottom: 20px; /* Adjust as needed to avoid scrollbar being hidden behind the footer */
+  left: 0;
+  right: 0;
+  overflow-y: auto; /* Enable vertical scrollbar if content exceeds viewport height */
 }
 
-.nav_item_list {
-  display: flex;
-  justify-content: space-between; /* or space-around or space-evenly */
-  width: auto;
-  list-style: none;
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.nav_item {
-  margin-right: 10px;
-  cursor: pointer;
-}
-
-.active {
-  background-color: rgb(204, 198, 198);
-  padding: 1px;
-  border-radius: 5px;
-}
-
-.nav_item:nth-child(1):hover {
-  cursor: pointer;
-  /* text-decoration: underline; */
-  /* color: blue; */
-}
-.nav_item:nth-child(2):hover {
-  cursor: pointer;
-  /* text-decoration: underline; */
-  /* color: blue; */
-}
-.nav_item:nth-child(3):hover {
-  cursor: pointer;
-  /* text-decoration: underline; */
-  /* color: blue; */
-}
-.nav_item:nth-child(4):hover {
-  cursor: pointer;
-  /* text-decoration: underline; */
-  /* color: blue; */
-}
-.nav_item:nth-child(5):hover {
-  cursor: pointer;
-  /* text-decoration: underline; */
-  /* color: blue; */
+#app-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure the header stays above other content */
 }

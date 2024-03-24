@@ -1,0 +1,17 @@
+/* Footer container */
+.footer {
+  background-color: #dfdbdb; /* Background color */
+  color: #9c9999; /* Text color */
+  text-align: center; /* Center-align text */
+}
+
+/* Styling links in the footer */
+.footer a {
+  color: #fff; /* Link text color */
+  text-decoration: none; /* Remove underline */
+}
+
+/* Hover effect for links */
+.footer a:hover {
+  text-decoration: underline; /* Underline on hover */
+}

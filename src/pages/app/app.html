@@ -5,11 +5,12 @@
   ></require>
   <require from="../header/app-navbar"></require>
   <require from="../main/home/home"></require>
+  <require from="../footer/app-footer"></require>
   <!-- <require from="../main/user/users""></require> -->
 
   <section>
     <!-- header/nav part of app -->
-    <header id="app_header">
+    <header id="app-header">
       <!-- Good way to create nav menu using separate nav folder -->
       <app-navbar router.bind="router" containerless></app-navbar>
       <!-- Basic way to create nav menu -->
@@ -38,7 +39,7 @@
     </header>
 
     <!-- main content part of app -->
-    <main id="app_main">
+    <main id="app-main">
       <router-view containerless></router-view>
       <loading-indicator loading.bind="router.isNavigation"></loading-indicator>
 
@@ -54,8 +55,8 @@
     </main>
 
     <!-- footer part of app -->
-    <footer id="app_footer">
-      <small> &copy; AV Ventures 2024 | Built in Samastipur, Bihar </small>
+    <footer id="app-footer">
+      <app-footer containerless></app-footer>
     </footer>
   </section>
 </template>

@@ -1,24 +1,26 @@
 <template>
-  <div class="nav">
-    <div id="logo">
-      <img src="../../assets/images/home_chart.png" alt="Logo" />
-    </div>
-    <ul class="nav_item_list">
-      <li
-        repeat.for="route of router.navigation"
-        class="nav_item ${route.isActive?'active':''}"
-      >
-        <a href.bind="route.href" style="text-decoration: none"
-          >${route.title}</a
+  <div class="navbar">
+    <div class="nav">
+      <div id="logo">
+        <img src="../../assets/images/home_chart.png" alt="Logo" />
+      </div>
+      <ul class="nav_item_list">
+        <li
+          repeat.for="route of router.navigation"
+          class="nav_item ${route.isActive?'active':''}"
         >
-      </li>
-      <li>
+          <a href.bind="route.href" style="text-decoration: none"
+            >${route.title}</a
+          >
+        </li>
+      </ul>
+      <div class="spinnig-cog">
         <i
           class="fa fa-cog fa-spin fa-1x"
           style="margin: 0 auto"
           if.bind="router.isNavigating"
         ></i>
-      </li>
-    </ul>
+      </div>
+    </div>
   </div>
 </template>
