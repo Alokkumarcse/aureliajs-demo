@@ -1,4 +1,19 @@
 <template>
-  <h3>Job Page</h3>
-  <p>${job}</p>
+  <div class="job-container">
+    <h2>Job Page</h2>
+    <div class="info-message">
+      <pre>
+        //canActivate() lifecycle method help to reject to navigation to this route
+        
+        canActivate(params, routeConfig, navigationInstruction) {
+          // added an arbitrary time delay to show an spinning cog while loading the routed page
+          let promise = new Promise((resolve, reject) => {
+            setTimeout((_) => resolve(false), 1000);
+          });
+          return promise;
+        }
+      </pre>
+    </div>
+    <p>Current opening ${job} roles listed here</p>
+  </div>
 </template>

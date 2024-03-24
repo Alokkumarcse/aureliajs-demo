@@ -1,23 +1,36 @@
 <template>
-  <h3>Discussion Page</h3>
-  <p>${discussion}</p>
-  <p>
-    In this tab we are using canDeactivate() method to prevent away from the
-    current screen such as if there's input from user that has not been saved.
-    <br />
-    We may need to prompt the user, ask them if they want to save that or if
-    they want to cancel the navigation altogether.
-    <br />
-    we can do these things with the canDeactivate method.
-  </p>
+  <div class="discussion-container">
+    <h3>Discussion Page</h3>
 
-  <br />
-  Discussion Input:
-  <input type="text" value.bind="discussionInput" />
-  <button type="button" click.delegate="save()">Save</button>
-  <br />
-  <br />
-  Test the canDeactivate() and deactivate() method.
-  <br />
-  <br />
+    <p class="info-message">
+      In this tab we are using canDeactivate() method to prevent away from the
+      current screen such as if there's input from user that has not been saved.
+      <br />
+      We may need to prompt the user, ask them if they want to save that or if
+      they want to cancel the navigation altogether.
+      <br />
+      we can do these things with the canDeactivate() method.
+    </p>
+
+    <br />
+    <p class="warning-message">
+      We have to give some Discussion input and click on save then allowed to
+      navigate another tab!
+     
+    </p>
+    <p>
+      Discussion Input:
+      <input type="text" value.bind="discussionInput" />
+      <button type="button" click.delegate="save()">Save</button>
+    
+    
+      <br />
+      <p class="info-message">
+         Here we are testing canDeactivate() and deactivate() method on current router view!
+         <br>
+         <br>
+         If canDeactivate() method return false then can't navigate to other tab else able to navigate to other tab.
+      </p>
+    </p>
+  </div>
 </template>

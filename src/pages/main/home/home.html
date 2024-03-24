@@ -1,18 +1,24 @@
 <template>
   <div style="padding: 20px">
-    <h2>Main component</h2>
+    <h2>${home}</h2>
 
     <div style="margin-bottom: 10px">
-      <h4>${home}</h4>
-      <h1>${message}</h1>
-      <div style="width: 600px; height: 400px; margin: 20px auto">
+      <div class="warning-message">
+        Note: when try to Navigate to Job tab. There is use canActivate() router
+        screen lifecycle to prevent to load Job view/viewModel because
+        canActivate() method in Job viewModel returning "false". If
+        canActivate() method return "true" than can navigate to Job tab.
+      </div>
+
+      <div class="info-message img-container">
         <img
           src="../../../assets/images/home_chart.png"
           alt="pics"
           style="width: 600px; height: 400px"
         />
       </div>
-      <div style="margin: 0 10px">
+
+      <div class="info-message" style="margin: 0 10px">
         <input
           type="text"
           value.bind="input"

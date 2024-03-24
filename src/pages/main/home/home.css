@@ -1,0 +1,23 @@
+.warning-message {
+  background-color: #ffe4e1; /* Light pink background color */
+  color: #8b0000; /* Dark red text color */
+  padding: 10px; /* Add some padding for better readability */
+  border: 1px solid #ff6347; /* Red border */
+  border-radius: 5px; /* Rounded corners */
+  font-weight: bold; /* Bold text */
+}
+
+.info-message {
+  background-color: #e0f7fa; /* Light blue background color */
+  color: #00796b; /* Dark greenish-blue text color */
+  padding: 10px; /* Add some padding for better readability */
+  border: 1px solid #00acc1; /* Light blue border */
+  border-radius: 5px; /* Rounded corners */
+  font-weight: bold; /* Bold text */
+}
+
+.img-container {
+  width: 600px;
+  height: 400px;
+  margin: 20px auto;
+}

@@ -1,0 +1,25 @@
+/* Container for the Not Found page */
+.not-found-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+}
+
+/* Not Found message */
+.not-found-message {
+  text-align: center;
+  font-size: 24px;
+  color: #333; /* Text color */
+}
+
+/* Styling the link */
+.not-found-link {
+  color: #007bff; /* Link color */
+  text-decoration: none; /* Remove underline */
+}
+
+/* Hover effect for the link */
+.not-found-link:hover {
+  text-decoration: underline; /* Underline on hover */
+}

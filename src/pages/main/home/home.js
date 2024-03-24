@@ -1,3 +1,5 @@
+import "./home.css";
+
 import { inject } from "aurelia-framework";
 
 import { DataCache } from "../../../services/data-cache";

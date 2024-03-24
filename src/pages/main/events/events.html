@@ -1,14 +1,15 @@
 <template>
-  <div>
+  <div class="events-container">
     <h2>Events Page</h2>
     <h3>${name}</h3>
-  </div>
-  <div repeat.for="task of events">
-    <compose view-model="./event" model.bind="task"></compose>
-  </div>
-  <div>
-    <ul repeat.for="item of cache.data">
-      <li>${item}</li>
-    </ul>
+
+    <div repeat.for="task of events">
+      <compose view-model="./event" model.bind="task"></compose>
+    </div>
+    <div>
+      <ul repeat.for="item of cache.data">
+        <li>${item}</li>
+      </ul>
+    </div>
   </div>
 </template>

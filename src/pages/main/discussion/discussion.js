@@ -1,3 +1,5 @@
+import "./discussion.css";
+
 import { bindable, bindingMode } from "aurelia-framework";
 
 function getDiscussionInput() {
@@ -5,6 +7,7 @@ function getDiscussionInput() {
   return "";
 }
 
+// doing deep copy of object
 function cloneObject(obj) {
   return JSON.parse(JSON.stringify(obj));
 }
