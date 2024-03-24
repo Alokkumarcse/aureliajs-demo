@@ -1,6 +1,8 @@
 .job-container {
   margin: 20px 5px;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .warning-message {
@@ -19,4 +21,5 @@
   border: 1px solid #00acc1; /* Light blue border */
   border-radius: 5px; /* Rounded corners */
   font-weight: bold; /* Bold text */
+  word-wrap: normal;
 }
