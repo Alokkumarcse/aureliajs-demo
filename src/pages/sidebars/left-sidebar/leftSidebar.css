@@ -1,0 +1,7 @@
+.left-sidebar-container {
+  background-color: rgb(153, 153, 148);
+  border: 1px solid rgb(204, 200, 200);
+  margin-right: 10px;
+  padding: 0 10px;
+  border-radius: 0 5px 5px 0;
+}

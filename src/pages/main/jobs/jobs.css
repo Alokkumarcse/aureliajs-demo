@@ -1,8 +1,11 @@
 .job-container {
-  margin: 20px 5px;
-  padding: 10px;
+  margin: 20px 0;
   display: flex;
   flex-direction: column;
+}
+
+.page-title {
+  margin: 0;
 }
 
 .warning-message {

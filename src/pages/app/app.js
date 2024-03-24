@@ -16,45 +16,110 @@ export class App {
     config.map([
       {
         route: ["", "home"],
-        moduleId: PLATFORM.moduleName("../main/home/home", "home"),
+        viewPorts: {
+          mainContent: {
+            moduleId: PLATFORM.moduleName("../main/home/home", "home"),
+          },
+          sideBar: {
+            moduleId: PLATFORM.moduleName(
+              "../sidebars/left-sidebar/leftSidebar",
+              "left sidebar"
+            ),
+          },
+        },
         name: "Home",
         nav: true,
         title: "Home",
+        settings: {},
       },
       {
         route: "jobs",
-        moduleId: PLATFORM.moduleName("../main/jobs/jobs", "jobs"),
+        viewPorts: {
+          mainContent: {
+            moduleId: PLATFORM.moduleName("../main/jobs/jobs", "jobs"),
+          },
+          sideBar: {
+            moduleId: PLATFORM.moduleName(
+              "../sidebars/left-sidebar/leftSidebar",
+              "left sidebar"
+            ),
+          },
+        },
         name: "Jobs",
         title: "Jobs",
         nav: true,
+        settings: {},
       },
       {
         route: "sponsors",
-        moduleId: PLATFORM.moduleName("../main/sponsors/sponsors", "sponsors"),
+        viewPorts: {
+          mainContent: {
+            moduleId: PLATFORM.moduleName(
+              "../main/sponsors/sponsors",
+              "sponsors"
+            ),
+          },
+          sideBar: {
+            moduleId: PLATFORM.moduleName(
+              "../sidebars/left-sidebar/leftSidebar",
+              "left sidebar"
+            ),
+          },
+        },
         name: "Sponsors",
         title: "Sponsors",
         nav: true,
       },
       {
         route: "events",
-        moduleId: PLATFORM.moduleName("../main/events/events", "events"),
+        viewPorts: {
+          mainContent: {
+            moduleId: PLATFORM.moduleName("../main/events/events", "events"),
+          },
+          sideBar: {
+            moduleId: PLATFORM.moduleName(
+              "../sidebars/left-sidebar/leftSidebar",
+              "left sidebar"
+            ),
+          },
+        },
         name: "Events",
         title: "Events",
         nav: true,
       },
       {
         route: "discussion",
-        moduleId: PLATFORM.moduleName(
-          "../main/discussion/discussion",
-          "discussion"
-        ),
+        viewPorts: {
+          mainContent: {
+            moduleId: PLATFORM.moduleName(
+              "../main/discussion/discussion",
+              "discussion"
+            ),
+          },
+          sideBar: {
+            moduleId: PLATFORM.moduleName(
+              "../sidebars/left-sidebar/leftSidebar",
+              "left sidebar"
+            ),
+          },
+        },
         name: "Discussion",
         title: "Discussion",
         nav: true,
       },
       {
         route: "user/:id",
-        moduleId: PLATFORM.moduleName("../main/user/user", "user"),
+        viewPorts: {
+          mainContent: {
+            moduleId: PLATFORM.moduleName("../main/user/user", "user"),
+          },
+          sideBar: {
+            moduleId: PLATFORM.moduleName(
+              "../sidebars/left-sidebar/leftSidebar",
+              "left sidebar"
+            ),
+          },
+        },
         name: "User",
         title: "User",
       },
