@@ -1,16 +1,23 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+}
+
 .warning-message {
   background-color: #ffe4e1; /* Light pink background color */
   color: #8b0000; /* Dark red text color */
-  padding: 10px; /* Add some padding for better readability */
+  padding: 10px; /*Add some padding for better readability*/
   border: 1px solid #ff6347; /* Red border */
   border-radius: 5px; /* Rounded corners */
   font-weight: bold; /* Bold text */
+  box-sizing: border-box;
 }
 
 .info-message {
   background-color: #e0f7fa; /* Light blue background color */
   color: #00796b; /* Dark greenish-blue text color */
-  padding: 10px; /* Add some padding for better readability */
+  padding: 10px; /*Add some padding for better readability*/
   border: 1px solid #00acc1; /* Light blue border */
   border-radius: 5px; /* Rounded corners */
   font-weight: bold; /* Bold text */
@@ -20,4 +27,47 @@
   width: 600px;
   height: 400px;
   margin: 20px auto;
+}
+
+.home-nav-list {
+  display: flex;
+  flex-direction: row;
+  background-color: #b3aeae;
+  list-style: none;
+  width: 100vw;
+  height: 25px;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 40px;
+  left: 0;
+}
+
+.home-nav-item {
+  margin-right: 10px;
+  cursor: pointer;
+  padding: 3px;
+}
+
+.home-nav-item a {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.active-item {
+  background-color: rgb(204, 198, 198);
+  padding: 2px;
+  border-radius: 5px;
+}
+
+.home-nav-item:hover {
+  cursor: pointer;
+}
+
+.content-view {
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: green;
+  text-align: center;
+  vertical-align: middle;
 }

@@ -1,6 +1,7 @@
 import "./home.css";
 
 import { inject } from "aurelia-framework";
+import { PLATFORM } from "aurelia-pal";
 
 import { DataCache } from "../../../services/data-cache";
 
@@ -20,6 +21,38 @@ export class Home {
       setTimeout((_) => resolve(), 1000);
     });
     return promise;
+  }
+
+  configureRouter(config, router) {
+    this.router = router;
+    config.options.pushState = true;
+    // config.title = "Home";
+    config.map([
+      {
+        route: ["", "about"],
+        moduleId: PLATFORM.moduleName("./about/about", "about"),
+        nav: true,
+        name: "about",
+        title: "About",
+        href: "home/about",
+      },
+      {
+        route: "profile",
+        moduleId: PLATFORM.moduleName("./profile/profile", "profile"),
+        nav: true,
+        name: "profile",
+        title: "Profile",
+        href: "home/profile",
+      },
+      {
+        route: "store",
+        moduleId: PLATFORM.moduleName("./store/store", "store"),
+        name: "store",
+        title: "Store",
+        nav: true,
+        href: "home/store",
+      },
+    ]);
   }
 
   addItem(item) {

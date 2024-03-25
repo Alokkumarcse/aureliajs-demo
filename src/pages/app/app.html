@@ -41,9 +41,9 @@
     <!-- main content part of app -->
     <main id="app-main">
       <!-- Sidebar viewport -->
-      <router-view name="sideBar" containerless></router-view>
+      <!-- <router-view name="sideBar" containerless></router-view> -->
       <!-- Main content viewport (default) -->
-      <router-view name="mainContent" containerless></router-view>
+      <router-view containerless></router-view>
       <loading-indicator loading.bind="router.isNavigation"></loading-indicator>
 
       <!-- rendering component directly by require that component and use as element -->
