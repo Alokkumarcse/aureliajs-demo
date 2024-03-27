@@ -1,3 +1,26 @@
 <template>
-  <h3>About page</h3>
+  <div>
+    <h3>About page</h3>
+    <br />
+    <h2>Event Binding Overview</h2>
+    <div class="info">
+      <h3>event.delegate = "eventHandlerName()"</h3>
+      <p>Wires up event handler at <b>Document Level.</b></p>
+    </div>
+
+    <div class="info">
+      <h3>event.trigger = "eventHandlerName()"</h3>
+      <p>Wires up event handler on <b>Element itself.</b></p>
+    </div>
+
+    <div class="info">
+      <h3>attribute.call="handlerName()"</h3>
+      <p>Passes <b>function pointer </b> to attribute for later invocation.</p>
+    </div>
+
+    <div class="info">
+      <h3>$event</h3>
+      <p>Can pass event argument to target method/handler</p>
+    </div>
+  </div>
 </template>

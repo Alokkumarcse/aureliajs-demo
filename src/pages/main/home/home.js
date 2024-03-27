@@ -8,9 +8,6 @@ import { DataCache } from "../../../services/data-cache";
 @inject(DataCache)
 export class Home {
   constructor(dataCache) {
-    this.message = "Hello World!";
-    this.input = "";
-    this.home = "Home";
     this.cache = dataCache;
     this.addItem("newItem");
   }
@@ -29,7 +26,15 @@ export class Home {
     // config.title = "Home";
     config.map([
       {
-        route: ["", "about"],
+        route: "",
+        moduleId: PLATFORM.moduleName("./main/main", "main"),
+        nav: true,
+        name: "main",
+        title: "Main",
+        href: "home",
+      },
+      {
+        route: "about",
         moduleId: PLATFORM.moduleName("./about/about", "about"),
         nav: true,
         name: "about",

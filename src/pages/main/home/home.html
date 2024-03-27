@@ -1,6 +1,6 @@
 <template>
-  <div class="home-container">
-    <div class="home-nav-container">
+  <div id="home-container">
+    <header class="home-nav-container">
       <ul class="home-nav-list">
         <li
           repeat.for="route of router.navigation"
@@ -11,43 +11,9 @@
           >
         </li>
       </ul>
-    </div>
+    </header>
 
-    <div style="padding: 20px">
-      <h2>${home}</h2>
-      <div style="margin-bottom: 10px">
-        <div class="warning-message">
-          Note: when try to Navigate to Job tab. There is use canActivate()
-          router screen lifecycle to prevent to load Job view/viewModel because
-          canActivate() method in Job viewModel returning "false". If
-          canActivate() method return "true" than can navigate to Job tab.
-        </div>
-
-        <div class="info-message img-container">
-          <img
-            src="../../../assets/images/home_chart.png"
-            alt="pics"
-            style="width: 600px; height: 400px"
-          />
-        </div>
-
-        <div class="info-message" style="margin: 0 10px">
-          <input
-            type="text"
-            value.bind="input"
-            placeholder="type something here"
-          />
-          <button type="submit" click.trigger="submit()">Submit</button>
-          <br />
-          <div
-            style="background-color: palegreen; width: fit-content; margin: 10x"
-          >
-            ${input}
-          </div>
-        </div>
-      </div>
-    </div>
-    <main class="content-view">
+    <main class="main-content-view">
       <router-view containerless></router-view>
     </main>
   </div>
