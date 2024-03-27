@@ -31,7 +31,7 @@ export class Sponsors {
     console.log(this.usersData);
     // added an arbitrary time delay to show an spinning cog while loading the routed page
     let promise = await new Promise((resolve, reject) => {
-      setTimeout(() => resolve(), 2000);
+      setTimeout(() => resolve(), 200);
     });
     return promise;
   }

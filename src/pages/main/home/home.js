@@ -18,7 +18,7 @@ export class Home {
   activate(params, routeConfig, navigationInstruction) {
     // added an arbitrary time delay to show an spinning cog while loading the routed page
     let promise = new Promise((resolve, reject) => {
-      setTimeout((_) => resolve(), 1000);
+      setTimeout((_) => resolve(), 50);
     });
     return promise;
   }

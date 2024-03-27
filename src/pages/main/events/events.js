@@ -24,7 +24,7 @@ export class Events {
   activate() {
     // added an arbitrary time delay to show an spinning cog while loading the routed page
     let promise = new Promise((resolve, reject) => {
-      setTimeout((_) => resolve(), 1000);
+      setTimeout((_) => resolve(), 200);
     });
     return promise;
   }

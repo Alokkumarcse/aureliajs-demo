@@ -17,6 +17,32 @@
       </pre>
       <pre>}</pre>
     </div>
-    <p>Current opening ${job} roles listed here</p>
+    <div>
+      <h3>Current opening ${job} roles listed here</h3>
+      <table
+        repeat.for="job of jobDetails"
+        style="border: 2px solid green; margin-bottom: 10px"
+      >
+        <tbody class="info-message">
+          <tr>
+            <td>
+              <a href.bind="job.url"
+                ><h3 textContent.bind="job.jobTitle"></h3
+              ></a>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <h5>${job.date}: ${job.time}</h5>
+            </td>
+          </tr>
+
+          <tr>
+            <td innerHTML.bind="job.description"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </template>
