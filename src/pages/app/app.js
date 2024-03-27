@@ -20,6 +20,9 @@ export class App {
         name: "Home",
         nav: true,
         title: "Home",
+        settings: {
+          hasChildRoutes: true,
+        },
       },
       {
         route: "jobs",
@@ -70,4 +73,32 @@ export class App {
       };
     });
   }
+
+  // attached method used here to execute some method when first time render this component
+  // attached() {
+  //   this.currentActiveRoute();
+  //   this.hasChildRoutes();
+  // }
+
+  // Method to check current active route
+  // currentActiveRoute() {
+  //   console.log(this.router.currentInstruction.config.name, "active route");
+  // }
+
+  // Method to check if a route has child routes
+  // hasChildRoutes() {
+  //   //  Check if the 'home' route has child routes
+  //   let homeRouteConfig = config.routes.find((route) => route.name === "home");
+  //   if (
+  //     homeRouteConfig &&
+  //     homeRouteConfig.childRoutes &&
+  //     homeRouteConfig.childRoutes.length > 0
+  //   ) {
+  //     console.log('The "home" route has child routes.');
+  //   } else {
+  //     console.log('The "home" route does not have child routes.');
+  //   }
+  // let config = this.router.routes.find((route) => route.name === routeName);
+  // console.log(config.settings?.childRoutes, "child routes");
+  // return config && config.settings && config.settings.childRoutes;
 }

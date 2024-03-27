@@ -1,6 +1,9 @@
 import "./jobs.css";
 
+import { inject } from "aurelia-framework";
+
 import { jobDetails } from "../../../services/job-details";
+
 export class Jobs {
   constructor() {
     this.job = "jobs";

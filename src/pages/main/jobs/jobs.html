@@ -39,7 +39,13 @@
           </tr>
 
           <tr>
-            <td innerHTML.bind="job.description"></td>
+            <!-- <td innerHTML.bind="job.description | sanitizeHTML"></td> -->
+            <td
+              if.bind="job.id === 1"
+              innerHTML.bind="job.description"
+              contenteditable="true"
+            ></td>
+            <td else innerHTML.bind="job.description"></td>
           </tr>
         </tbody>
       </table>

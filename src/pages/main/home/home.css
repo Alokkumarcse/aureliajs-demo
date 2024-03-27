@@ -34,7 +34,7 @@
   flex-direction: row;
   background-color: #b3aeae;
   list-style: none;
-  width: 100vw;
+  width: 98.2vw;
   height: 25px;
   margin: 0;
   padding: 0;
@@ -67,7 +67,7 @@
 .content-view {
   padding: 10px;
   box-sizing: border-box;
-  background-color: green;
+  background-color: rgb(200, 211, 200);
   text-align: center;
   vertical-align: middle;
 }
